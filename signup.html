@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <title>Rejestracja</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+</head>
+
+<body class="bg-gray-600">
+
+    <div id="wrapper" class="flex flex-col justify-between h-screen">
+
+        <div class="bg-dark py-4 shadow dark:bg-gray-600">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center lg:justify-between justify-around">
+                    <a href="trending.html">
+                        <b><h1 style="font-size: 1.5rem;">dobravaza</h1></b>
+                    </a>
+
+                    <div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
+                        <a href="/signin" class="bg-pink-500 pink-500 px-6 py-3 rounded-md shadow text-white">Zaloguj się</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="lg:p-10 max-w-md max-w-xl lg:my-0 my-14 mx-auto p-6 space-y-">
+                <h1 class="lg:text-3xl text-xl font-semibold mb-6"> Zaloguj się </h1>
+                <div class="error_log">
+                    <style>
+                        body {
+background-image: linear-gradient(
+  45deg,
+  hsl(0deg 0% 100%) 0%,
+  hsl(232deg 74% 98%) 11%,
+  hsl(231deg 74% 95%) 22%,
+  hsl(231deg 74% 93%) 33%,
+  hsl(230deg 74% 91%) 44%,
+  hsl(230deg 74% 88%) 56%,
+  hsl(229deg 74% 86%) 67%,
+  hsl(228deg 73% 83%) 78%,
+  hsl(228deg 73% 81%) 89%,
+  hsl(227deg 73% 78%) 100%
+);
+
+
+                        }
+input[type="checkbox"], label[for="chekcbox1"] {
+    margin: 0;
+    padding: 0;
+}
+
+
+                        h5{
+                        color:red;
+                        margin:0 auto;
+                        }
+                        .capitalize{
+                            text-align: center;
+                        }
+                        .center-horizontally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+
+                        .new_account{
+                        color:blue;
+                        font-weight:boldest;}
+
+                    </style>
+
+                    {% for message in messages %}
+                    <h5>{{message}}</h5>
+                    {% endfor %}
+                </div>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Nazwa użytkownika"  name = "username"  class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+                    <input type="email" placeholder="Email" name = "email"  class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+                    <input type="password" placeholder="Hasło" name = "password"  class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+                    <input type="password" name = "password2" placeholder="Potwierdź hasło" class="bg-gray-200 mb-2 shadow-none  dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
+<div class="flex justify-start my-4 space-x-1 center-horizontally items-center">
+    <div class="checkbox">
+        <input type="checkbox" id="chekcbox1" checked>
+        <label for="chekcbox1"><span class="checkbox-icon"></span> Akceptuję</label>
+    </div>
+    <a href="#"> Regulamin i Warunki </a>
+</div>
+
+                    <button type="submit" class="bg-gradient-to-br from-pink-500 py-3 rounded-md text-white text-xl to-red-400 w-full">Zaloguj się</button>
+                    <div class="text-center mt-5 space-x-2">
+                        <p class="text-base"> Masz już konto? <a href="signin" class="new_account"> Zaloguj się </a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+<div class="centered">
+    <p class="capitalize">© Prawa autorskie 2023 przez dobravaza</p>
+</div>
+
+
+    </div>
+
+    <script src="{% static 'assets/js/tippy.all.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/uikit.js' %}"></script>
+
