@@ -10,10 +10,10 @@
     <title>Strona Główna</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+    <link rel="stylesheet" href="{% static './assets/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static './assets/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static './assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static './assets/css/tailwind.css' %}">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <div class="left-side">
                 <div id="logo" class=" uk-hidden@s">
                     <a href="home.html">
-                        <b><h1 style="text-transform: uppercase;">Społecznościowy Książka</h1></b>
+                        <b><h1 style="text-transform: uppercase;">Social media simulator</h1></b>
                     </a>
                 </div>
                 <div class="header_search">
@@ -99,7 +99,7 @@
             </div>
 
             <div uk-lightbox>
-                <a href="{% static 'assets/images/post/img4.jpg' %}">
+                <a href="{% static './assets/images/post/img4.jpg' %}">
                     <img src="{% static 'assets/images/post/img4.jpg' %}" alt="">
                 </a>
             </div>
@@ -230,13 +230,13 @@
                             <div uk-lightbox>
                                 <div class="grid grid-cols-2 gap-2 p-2">
 
-                                    <a href="{% static 'assets/images/post/img9.jpg' %}" class="col-span-2">  
+                                    <a href="{% static './assets/images/post/img9.jpg' %}" class="col-span-2">
                                         <img src="{% static './assets/images/post/img9.jpg' %}" alt="" class="rounded-md w-full lg:h-76 object-cover">
                                     </a>
-                                    <a href="{% static 'assets/images/post/img10.jpg' %}">  
+                                    <a href="{% static './assets/images/post/img10.jpg' %}">
                                         <img src="{% static './assets/images/post/img10.jpg' %}" alt="" class="rounded-md w-full h-full">
                                     </a>
-                                    <a href="{% static 'assets/images/post/img11.jpg' %}" class="relative">  
+                                    <a href="{% static './assets/images/post/img11.jpg' %}" class="relative">
                                         <img src="{% static './assets/images/post/img11.jpg' %}" alt="" class="rounded-md w-full h-full">
                                         <div class="absolute bg-gray-900 bg-opacity-30 flex justify-center items-center text-white rounded-md inset-0 text-2xl"> + 15 więcej </div>
                                     </a>
