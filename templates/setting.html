@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <title>Ustawienia</title>
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+</head>
+
+<body>
+    <div class="container m-auto">
+        <h1 class="text-2xl leading-none text-gray-900 tracking-tight mt-3"> Ustawienia Konta </h1>
+        <ul class="mt-5 -mr-3 flex-nowrap lg:overflow-hidden overflow-x-scroll uk-tab">
+            <li class="uk-active"><a href="#">Ogólne</a></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Prywatność</a></li>
+            <li><a href="#">Powiadomienia</a></li>
+            <li><a href="#">Linki społecznościowe</a></li>
+            <li><a href="#">Płatności</a></li>
+            <li><a href="#">Bezpieczeństwo</a></li>
+        </ul>
+
+        <div class="grid lg:grid-cols-3 mt-12 gap-8">
+            <div>
+                <h3 class="text-xl mb-2"> Podstawowe</h3>
+            </div>
+            <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
+                <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
+                    <div>
+                        <label for=""> Imię</label>
+                        <input type="text" placeholder="Twoje imię.." class="shadow-none bg-gray-100">
+                    </div>
+                    <div>
+                        <label for=""> Nazwisko</label>
+                        <input type="text" placeholder="Twoje nazwisko.." class="shadow-none bg-gray-100">
+                    </div>
+                    <div class="col-span-2">
+                        <label for=""> Email</label>
+                        <input type="text" placeholder="Twój email.." class="shadow-none bg-gray-100">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="about">O mnie</label>
+                        <textarea id="about" name="about" rows="3"  class="shadow-none bg-gray-100"></textarea>
+                    </div>
+                    <div class="col-span-2">
+                        <label for=""> Lokalizacja</label>
+                        <input type="text" placeholder="" class="shadow-none bg-gray-100">
+                    </div>
+                    <div>
+                        <label for=""> Pracuję w</label>
+                        <input type="text" placeholder="" class="shadow-none bg-gray-100">
+                    </div>
+                    <div>
+                        <label for=""> Status związku</label>
+                        <select id="relationship" name="relationship"  class="shadow-none bg-gray-100">
+                            <option value="0">Brak</option>
+                            <option value="1">Singiel</option>
+                            <option value="2">W związku</option>
+                            <option value="3">Zamężna/Żonaty</option>
+                            <option value="4">Zaręczona/Zaręczony</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bg-gray-10 p-6 pt-0 flex justify-end space-x-3">
+                    <button class="p-2 px-4 rounded bg-gray-50 text-red-500"> Anuluj </button>
+                    <button type="button" class="button bg-blue-700"> Zapisz </button>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl mb-2"> Prywatność</h3>
+            </div>
+            <div class="bg-white rounded-md lg:shadow-lg shadow lg:p-6 p-4 col-span-2">
+                <!-- Tu były przykładowe ustawienia prywatności, zostawiam jak było -->
+                <!-- ... -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Skrypty -->
+    <script src="{% static 'assets/js/tippy.all.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/uikit.js' %}"></script>
+    <script src="{% static 'assets/js/simplebar.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static '../../unpkg.com/ionicons%405.2.3/dist/ionicons.js' %}"></script>
+</body>
+</html>
