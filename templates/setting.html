@@ -15,7 +15,10 @@
 
 <body>
     <div class="container m-auto">
-        <h1 class="text-2xl leading-none text-gray-900 tracking-tight mt-3"> Ustawienia Konta </h1>
+<h1 class="text-2xl leading-none text-gray-900 tracking-tight mt-3">
+    <a href="/" class="go_back"> Główna <a/>
+    / Ustawienia dla Konta {{user.username}}
+</h1>
         <ul class="mt-5 -mr-3 flex-nowrap lg:overflow-hidden overflow-x-scroll uk-tab">
             <li class="uk-active"><a href="#">Ogólne</a></li>
             <li><a href="#">Profil</a></li>
@@ -31,6 +34,8 @@
                 <h3 class="text-xl mb-2"> Podstawowe</h3>
             </div>
             <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
+                <form action ="" method="POST">
+                    {% csrf_token %}
                 <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
                     <div>
                         <label for=""> Imię</label>
@@ -46,11 +51,17 @@
                     </div>
                     <div class="col-span-2">
                         <label for="about">O mnie</label>
-                        <textarea id="about" name="about" rows="3"  class="shadow-none bg-gray-100"></textarea>
+                        <textarea id="about" name="bio" rows="3"  class="shadow-none bg-gray-100">{{user_profile.bio}}</textarea>
+                    </div>
+                                        <div class="col-span-2">
+                        <label for=""> Zdjęcie profiowe</label>
+                        <img src="{{user_profile.profileimg.url}}"/>
+
+                        <input name="image" type="file" value="" class="shadow-none bg-gray-100">
                     </div>
                     <div class="col-span-2">
                         <label for=""> Lokalizacja</label>
-                        <input type="text" placeholder="" class="shadow-none bg-gray-100">
+                        <input name="location" type="text" value="{{user_profile.location}}" class="shadow-none bg-gray-100">
                     </div>
                     <div>
                         <label for=""> Pracuję w</label>
@@ -68,9 +79,10 @@
                     </div>
                 </div>
                 <div class="bg-gray-10 p-6 pt-0 flex justify-end space-x-3">
-                    <button class="p-2 px-4 rounded bg-gray-50 text-red-500"> Anuluj </button>
-                    <button type="button" class="button bg-blue-700"> Zapisz </button>
+                    <button class="p-2 px-4 rounded bg-gray-50 text-red-500"><a href="./">Anuluj</a>  </button>
+                    <button type="submit" class="button bg-blue-700"> Zapisz </button>
                 </div>
+                </form>
             </div>
 
             <div>
